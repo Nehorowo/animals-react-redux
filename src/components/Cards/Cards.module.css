@@ -1,0 +1,26 @@
+.wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.filter_btn {
+  margin: 10px 0;
+  padding: 8px 20px;
+  height: 40px;
+  color: white;
+  font-family: inherit;
+  font-weight: 700;
+  background-color: rgb(255, 105, 0);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+
+.filter_btn:hover {
+  background-color: rgb(238, 95, 0);
+}
