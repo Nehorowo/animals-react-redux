@@ -3,11 +3,7 @@ import axios from 'axios';
 export const fetchCards = () => (dispatch) => {
   dispatch(setLoaded(false));
   axios
-    .get(
-      `https://zoo-animal-api.herokuapp.com/animals/rand/10`,
-      //https://axoltlapi.herokuapp.com/
-      //https://jsonplaceholder.typicode.com/posts
-    )
+    .get(`https://zoo-animal-api.herokuapp.com/animals/rand/10`)
     .then(({ data }) => dispatch(setCards(data)));
 };
 
