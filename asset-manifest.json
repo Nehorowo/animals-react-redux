@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/animals-react-redux/static/css/main.c45ef2e3.css",
-    "main.js": "/animals-react-redux/static/js/main.c3652cf7.js",
+    "main.js": "/animals-react-redux/static/js/main.6eaa5886.js",
     "index.html": "/animals-react-redux/index.html",
     "main.c45ef2e3.css.map": "/animals-react-redux/static/css/main.c45ef2e3.css.map",
-    "main.c3652cf7.js.map": "/animals-react-redux/static/js/main.c3652cf7.js.map"
+    "main.6eaa5886.js.map": "/animals-react-redux/static/js/main.6eaa5886.js.map"
   },
   "entrypoints": [
     "static/css/main.c45ef2e3.css",
-    "static/js/main.c3652cf7.js"
+    "static/js/main.6eaa5886.js"
   ]
 }
