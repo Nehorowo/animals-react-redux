@@ -1,9 +1,13 @@
 import React from 'react';
 import styles from './CardItem.module.css';
 
-const CardItem = ({ name, image_link, onClickLike, id, likes, diet }) => {
+const CardItem = ({ name, image_link, onClickLike, onClickDelete, id, likes, diet }) => {
   const handleLike = () => {
     onClickLike(id);
+  };
+
+  const handleDelete = () => {
+    onClickDelete(id);
   };
 
   return (
@@ -24,6 +28,7 @@ const CardItem = ({ name, image_link, onClickLike, id, likes, diet }) => {
           </g>
         </svg>
       </div>
+      <button onClick={handleDelete}>Удалить</button>
     </div>
   );
 };

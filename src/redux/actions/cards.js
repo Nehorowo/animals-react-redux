@@ -34,3 +34,8 @@ export const setFiltered = (isFiltered) => ({
   type: 'SET_FILTERED',
   isFiltered,
 });
+
+export const deleteCard = (id) => ({
+  type: 'DELETE_CARD',
+  payload: id,
+});

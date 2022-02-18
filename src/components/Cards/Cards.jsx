@@ -1,14 +1,19 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import CardItem from './CardItem/CardItem';
-import { fetchCards, setCardLiked, setCardUnliked, setFiltered } from '../../redux/actions/cards';
+import {
+  fetchCards,
+  setCardLiked,
+  setCardUnliked,
+  setFiltered,
+  deleteCard,
+} from '../../redux/actions/cards';
 import styles from './Cards.module.css';
 
 const Cards = () => {
   const cards = useSelector(({ cards }) => cards.items);
   const likes = useSelector(({ cards }) => cards.likes);
   const isFiltered = useSelector(({ cards }) => cards.isFiltered);
-
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -21,6 +26,10 @@ const Cards = () => {
     } else {
       dispatch(setCardLiked(id));
     }
+  };
+
+  const onClickDelete = (id) => {
+    dispatch(deleteCard(id));
   };
 
   const onClickFilter = () => {
@@ -48,6 +57,7 @@ const Cards = () => {
                   name={card.name}
                   image_link={card.image_link}
                   onClickLike={onClickLike}
+                  onClickDelete={onClickDelete}
                   {...card}
                   likes={likes}
                 />
@@ -58,6 +68,7 @@ const Cards = () => {
                 name={card.name}
                 image_link={card.image_link}
                 onClickLike={onClickLike}
+                onClickDelete={onClickDelete}
                 {...card}
                 likes={likes}
               />
